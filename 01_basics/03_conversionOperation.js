@@ -54,7 +54,57 @@
 // "" => false
 // "abcd" => true
 
-let someNumber = 33
-let stringNumber = String(someNumber)
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// let someNumber = 33
+// let stringNumber = String(someNumber)
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
+
+// *******************************************OPERATIONS*************************************************
+
+let value = 33
+let negValue = -value
+console.log(value);
+
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2/2);
+console.log(2%2);
+console.log(2**3);
+
+let str1 ="Hello"
+let str2 = " Sneha"
+let str3 = str1 + str2
+console.log(str3);
+
+console.log("1" + 2); // 12
+console.log(1 + "2"); // 12
+console.log("1" + 2 + 2); // 122 
+console.log(1 + 2 + "2"); // 32
+
+console.log( (3 +5) * (5 % 10))
+
+console.log(true); // true
+console.log(+true); // 1(true value is 1, when incremented still remains 1)
+//console.log(true+); // not possible, will throw error
+console.log(+""); // 0 ("" in boolean is false ie 0, when incremented still remains 0)
+
+
+let num1, num2, num3 
+num1 = num2 = num3 = 2 + 2 // this will give the output the imp thing while coding is readability
+
+let gameCounter = 100
+gameCounter++
+console.log(gameCounter);
+
+
+//prefix and postfix js mdn
+let x = 3;
+const y = x++;
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
