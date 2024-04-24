@@ -4,7 +4,7 @@ const repoCount= 50
 console.log(name + repoCount + " value"); // Sneha50 value
 // bad syntax
 
-// now we use back ticks, here we do string interpolation
+// now we use back ticks, here we do string interpolation // here we have made placeholders into which the data can be injected
 console.log(`Hello my name is ${name} and my repoCount is ${repoCount}`); // modern syntax
 
 // one more way to declare string
@@ -86,20 +86,29 @@ console.log(gameName.toUpperCase()); // SNEHA
 console.log(gameName.charAt(3)); // h 
 console.log(gameName.indexOf('h')); // 3
 
-const newString = gameName.substring(0,4)
+const newString = gameName.substring(0,4) // no negative value can be given, if given then it ignores it and starts from 0
 console.log(newString);
 
-const anotherString = gameName.slice(1, 3)
+const anotherString = gameName.slice(-8, 4) // when given a negative value it starts from reverse
 console.log(anotherString);
 
 const newStringOne = "     sneha    "
 console.log(newStringOne);
-console.log(newStringOne.trim()); 
+console.log(newStringOne.trim()); // removes whitespace from both ends of this string and returns a new string, without modifying the original string.
+// To return a new string with whitespace trimmed from just one end, use trimStart() or trimEnd().
 
-const url = "https://hitesh.com/hitesh%20chaudhary"
+const url = "https://hitesh.com/hitesh%20chaudhary" // if user had a space between hitesh and chaudhary, browser wont understand spaces and replaces it with url format(like %20), so to replace it we can  do the below
 console.log(url.replace('%20', '-'));
 console.log(url.includes('hitesh'));
 console.log(url.includes('sneha'));
 
+// split 
 const gameName1 = new String('Sneha-Raj-Reddy')
-console.log(gameName1.split('-'));
+console.log(gameName1.split('-')); // takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.
+const str = 'The quick brown fox jumps over the lazy dog.';
+const words = str.split(' ');
+console.log(words[3]); // Expected output: "fox"
+const chars = str.split('');
+console.log(chars[8]); // Expected output: "k"
+const strCopy = str.split();
+console.log(strCopy); // Expected output: Array ["The quick brown fox jumps over the lazy dog."]

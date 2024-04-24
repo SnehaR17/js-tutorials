@@ -41,7 +41,9 @@ console.log(Math.min(4, 3 , 2, 5));
 console.log(Math.max(4, 6, 7, 2));
 
 console.log(Math.random()); // will always lie between 0 and 1
-console.log((Math.random()*10) + 1)
+console.log((Math.random()*10) + 1) // multiplying will shift the decimal point by one point and  we're adding 1 to ensure that we dont get any value in 0 (like if the number is 0.0231 then even if we multiply by 10  we'll get 0.231 so we add 1 to avoid this)
+console.log(Math.floor(Math.random()*10) + 1) 
 
 const min = 10
-constmax = 20
+const max = 20
+console.log(Math.floor(Math.random()* (max-min + 1)) + min);
