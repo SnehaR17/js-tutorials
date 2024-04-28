@@ -38,3 +38,4 @@
 //     console.log(key, ':-', value);
     
 // } // tells myOject is not iteratable // for of doesn't work for object // theres another way
+// for of was working for maps but not objects
