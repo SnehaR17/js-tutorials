@@ -22,3 +22,35 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // coding.forEach(printMe) // he we have to the reference only, we shld not call ie, printMe()
 
+// coding.forEach( (item, index, arr) => {
+//     console.log(item, index, arr);
+// })
+// result is 
+//js 0 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+// ruby 1 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+// java 2 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+// python 3 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+// cpp 4 [ 'js', 'ruby', 'java', 'python', 'cpp' ]
+// so many parameters can be passed inside the parenthesis
+
+// [{}, {}, {},]  => this is used in for each many times
+
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName: "js"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "py"
+    },
+]
+
+myCoding.forEach( (item) => {
+    
+    console.log(item.languageName);
+} )

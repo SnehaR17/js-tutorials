@@ -22,6 +22,7 @@
 // }
 
 
+
 // let myarr = ["flash", "batman", "superman" ]
 // for (let index = 0; index < myarr .length; index++) {
 //     const element = myarr [index];
