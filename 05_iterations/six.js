@@ -6,7 +6,7 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // const values = coding.forEach((item) => {
 //     console.log(item); // prints the items as usual
-//     return item; // for each function does not return any value
+//     return item; // foreach function does not return any value
 // })
 // console.log(values); // undefined // because ntg is returned from the fun
 
