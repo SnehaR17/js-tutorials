@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
 
     <title>Document</title>
+
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #ffffff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">DOM learning on chai aur code</h1>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">test text</span></h1>
         <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, incidunt.</h2>
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi sit dolore obcaecati minus id distinctio!</h2>
+
+        <ul>
+                <li class="list item">one</li>
+                <li class="list item">two</li>
+                <li class="list item">three</li>
+                <li class="list item">four</li>
+        </ul>
     </div>
 </body>
 </html>
 
-<!-- DOM => Document object model
+
+<!-- video 31 => Bredan Eich wikipedia
+DOM => Document object model
 windiow is one of the complex object
 console.log(window)
 console.log(window.document) 
@@ -22,4 +41,97 @@ console.log(document) // document alone can also be used as it is so popular tht
 console.log(document.baseURI) // gives the base uri of the webpage 
 console.log(document.links) // gives all the links of the doc trough html collection (html collection, node collection are not arrays but can be converted into an array)
 console.log(document.links[2]) // link is like an array so we have properties of array, [2] gives the second link
-document.getElementById('firstHeading').innerHTML = "<h1>Chai aur Code</h1>" -->
+document.getElementById('firstHeading')
+document.getElementById('firstHeading').innerHTML = "<h1>Chai aur Code</h1>" // will vchange brendan eich to chai aur code -->
+
+<!-- targetting an element 
+document.getElementById('title')
+       <h1 id=​"title" class=​"heading">​DOM learning on chai aur code​</h1>​
+document.getElementById('title').id
+       'title'
+document.getElementById('title').class
+        undefined
+document.getElementById('title').className
+        'heading'​
+document.getElementById('title').getAttribute('id')
+        'title'
+document.getElementById('title').setAttribute('class' , 'test') // always overwrites the attribute
+        undefined
+const title = document.getElementById('title')
+const title = document.getElementById('title')
+        undefined
+title
+        <h1 id=​"title" class=​"test">​DOM learning on chai aur code​</h1>​
+title.style.backgroundColor = 'green'
+        'green'
+title.style.padding = '15px'
+        '15px'
+title.style.borderRadius = '15px'
+        '15px'
+title.innerHTML
+        'DOM learning on chai aur code <span style="display: none;">test text</span>'
+title.innerText // only the text being displayed
+        'DOM learning on chai aur code'
+title.textContent // displays the hidden text also
+        'DOM learning on chai aur code test text'
+document.querySelector('h2')
+        <h2>​Lorem ipsum dolor sit amet.​</h2>​
+document.querySelector('#title')
+        <h1 id=​"title" class=​"heading">​…​</h1>​"DOM learning on chai aur code "<span style=​"display:​ none;​">​test text​</span>​</h1>​
+document.querySelector('.heading')
+        <h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('ul')
+        <ul>​…​</ul>​
+const myul = document.querySelector('ul')
+        undefined
+myul.querySelector('li')
+        <li>​…​</li>​
+const trunGreen = myul.querySelector('li')
+        undefined
+trunGreen.style.backgroundColor = "green"
+        'green'
+trunGreen.style.padding = "15px"
+        '15px'
+trunGreen.innerText
+        'one'
+trunGreen.innerText = 'five'
+        'five'
+document.querySelectorAll('li')
+        NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+const tempLiList = document.querySelectorAll('li')
+        undefined
+tempLiList
+        NodeList(3) [li, li, li]
+tempLiList.style.color = 'green'
+        VM1167:1 Uncaught TypeError
+tempLiList[0].style.color = 'green'
+        'green'
+tempLiList.forEach( function (l) {
+  l.style.backgroundColor = 'red'  
+})
+
+const myh1 = document.querySelectorAll('h1')
+        undefined
+myh1.style.color = 'green'
+        VM566:1 Uncaught error
+myh1[0].style.color = 'green'
+        'green'
+
+
+// getElementByClassName => returns an html collection which is different from node list that we get from getElementById, this is also not a pure array 
+
+document.getElementsByClassName("list item")
+        HTMLCollection(4) [li.list.item, li.list.item, li.list.item, li.list.item]
+const tempClassList = document.getElementsByClassName("list item")
+        undefined
+// properties like maps and forEach cant be applied to html collection, we must convert it into array
+
+const myConvertedList = Array.from(tempClassList)
+        undefined
+myConvertedList
+        (4) [li.list.item, li.list.item, li.list.item, li.list.item]
+myConvertedList.forEach( function(li){
+    li.style.color = 'orange'
+})
+        undefined
+-->
