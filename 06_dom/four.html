@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerText = (`${langName}`)
+        document.querySelector('.language').appendChild(li)
+}
+addLanguage('python')
+addLanguage("c++")
+
+//  each time appenChild is made to run then the document has to traverse the entire tree, since here original list had only one item it was ok but if many values are there then it would create a problem // optimization problem
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("typescript")
+
+    //edit
+    const secondLang = document.querySelector('li:nth-child(2)')
+    console.log(secondLang);
+    secondLang.innerText = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    //edit 
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>GoLang</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+</script>
+</html>
