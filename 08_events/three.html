@@ -7,10 +7,11 @@
 </head>
 <body>
     <h1>Chai aur JS</h1>
-    <button id="stop">Stop</button>
     <button id="start">Start</button>
+    <button id="stop">Stop</button>
 </body>
 <script>
+
     // setInterval(function(){
     //     console.log('Sneha', Date.now());
     // },2000)
@@ -18,11 +19,23 @@
     // const sayDate = function(){
     //     console.log('Sneha', Date.now());
     // }
-    // setInterval(sayDate,2000)
+    // const intervalId = setInterval(sayDate,2000)
+    // clearInterval(intervalId)
 
+    // using the start and stop buttons and manually control printing
+
+    let intervalId
+    document.querySelector('#start').addEventListener('click', function(){
+        const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+    intervalId = setInterval(sayDate,2000, 'hii')
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId)
+        console.log('Stopped');
+    })
     
-
-
-
 </script>
 </html>
