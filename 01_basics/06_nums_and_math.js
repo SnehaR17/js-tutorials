@@ -34,9 +34,9 @@ console.log(hundreds.toLocaleString('en-IN'));
 // maths library comes by default in js
 console.log(Math);
 console.log(Math.abs(-4));  // converts negative values to positive 
-console.log(Math.round(4.6));  
-console.log(Math.floor(4.6));  
-console.log(Math.ceil(4.6));
+console.log(Math.round(4.6)); // normal // 5
+console.log(Math.floor(4.6));  // rounds off to lower value // 4 
+console.log(Math.ceil(4.6)); // rounds off to higher value // 5
 console.log(Math.min(4, 3 , 2, 5));
 console.log(Math.max(4, 6, 7, 2));
 
